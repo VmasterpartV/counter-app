@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// Antes
+
+/*
+import React from "react";
+import ReactDom from "react-dom";
+// import PrimeraApp from "./PrimeraApp";
+import CounterApp from "./CounterApp";
+
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const divRoot = document.querySelector('#app');
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDom.render( <CounterApp value={ 23 } />, divRoot );
+*/
+
+// React +18
+
+import React from "react";
+import { createRoot } from 'react-dom/client';
+// import PrimeraApp from "./PrimeraApp";
+import CounterApp from "./CounterApp";
+
+import './index.css';
+
+const divRoot = document.querySelector('#app');
+const root = createRoot(divRoot);
+
+root.render( <CounterApp value={ 23 } /> );
